@@ -1,14 +1,31 @@
 
 const container = document.querySelector('.container');
-let a = prompt('hwat', 4);
-
-for (let i = 0; i < a*a; i++) {
+for (let i = 0; i < 16*16; i++) {
     let square = document.createElement('div');
-    square.style.height = `${100/a}%`;
-    square.style.width = `${100/a}%`;
+    square.classList.add('squares');
+    square.style.height = `${100/16}%`;
+    square.style.width = `${100/16}%`;
     square.style.border = "1px solid black";
     container.appendChild(square);
 };
+// let a = prompt('hwat', 4);
+
+const newSize = document.querySelector('#newSize');
+newSize.addEventListener('click', () =>{
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    };
+    let a = prompt('kk');
+    for (let i = 0; i < a*a; i++) {
+        let square = document.createElement('div');
+        square.style.height = `${100/a}%`;
+        square.style.width = `${100/a}%`;
+        square.style.border = "1px solid black";
+        container.appendChild(square);
+    };
+});
+
+
 
 const green = document.querySelector('#green');
 green.addEventListener('click', greenColor);
