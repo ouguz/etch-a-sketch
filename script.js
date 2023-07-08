@@ -14,7 +14,7 @@ const green = document.querySelector('#green');
 green.addEventListener('click', greenColor);
 function greenColor () {
 container.addEventListener('mouseover', (event) => {
-    event.target.setAttribute('class', 'makeItGreen');
+    event.target.style.backgroundColor = 'green';
 });
 };
 
@@ -28,7 +28,7 @@ resetButton.addEventListener('click', () => {
         // child.classList.remove('makeItWhite');
         // child.classList.add =('makeItYellow');
         // container.style.backgroundColor = 'yellow';
-        child.style.backgroundColor = 'yellow';
+        child.style.backgroundColor = 'white';
     };
 });
 
@@ -44,6 +44,10 @@ function randomColor () {
         event.target.style.backgroundColor = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
     });
 };
+
+container.addEventListener('mouseover', (event) => {
+    event.target.style.backgroundColor = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+});
 
     
 
