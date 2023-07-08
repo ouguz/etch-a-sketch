@@ -25,3 +25,19 @@
 .makeItGreen {
     background-color: green;
 }
+
+.makeItBlack {
+    background-color: black;
+}
+
+.makeItWhite {
+    background-color: white;
+}
+
+.makeItRed {
+    background-color: red;
+}
+
+.makeItYellow {
+    background-color: yellow;
+}
