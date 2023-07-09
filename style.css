@@ -6,6 +6,11 @@
     padding: 0;
 }
 
+@media (max-width: 800px) {
+    #mainHeader {
+      font-size: 60px;
+    }
+}
 body {
     background-color: peachpuff;
     color: royalblue;
@@ -106,6 +111,8 @@ button#reset:active {
 
 .slider-container {
     width: 100%;
+    font-size: 24px;
+    text-align: center;
 }
 
 .slider {

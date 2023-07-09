@@ -11,12 +11,16 @@ for (let i = 0; i < 16*16; i++) {
 
 const slider = document.querySelector('#myRange');
 const sliderIndicator = document.querySelector('#demo');
-sliderIndicator.textContent = '16 x 16';
-slider.addEventListener('change', () =>{
+sliderIndicator.textContent = `${slider.value} x ${slider.value}`
+slider.addEventListener('input', () =>{
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     };
     let a = slider.value;
+    slider.addEventListener('input', (event) => {
+        const tempSliderValue = event.target.value;
+        sliderIndicator.textContent = `${tempSliderValue} x ${tempSliderValue}`;
+    });
     sliderIndicator.textContent = `${slider.value} x ${slider.value}`;
     for (let i = 0; i < a*a; i++) {
         let square = document.createElement('div');
