@@ -8,13 +8,28 @@
     <title>Etch-A-Sketch Game</title>
 </head>
 <body>
-
-    <div class="container">
-
+    
+    <div class="main">
+        <div class="header">
+            <h1>Etch-A-Sketch</h1>
+        </div>
+        
+        <div class="double">
+            <div class="container">
+            </div>
+            <div class="buttonsContainer">
+                <input type="color" id="colorPicker" value="#4169E1">
+                <button id="black">Black</button>
+                <button id="rainbow">Random</button>
+                <button id="eraser">Eraser</button>
+                <button id="reset">Resets</button>
+                <div class="slider-container">
+                    <input type="range" min="1" max="64" class="slider" value="16" id="myRange">
+                    <p><span id="demo"></span></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <button id="reset">Resets</button>
-    <button id="black">Black</button>
-    <button id="green">Green</button>
-    <button id="rainbow">Random</button>
+    <footer> made y</footer>
 </body>
 </html>
